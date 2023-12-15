@@ -3,11 +3,12 @@
       padding: 0;
       box-sizing: border-box;
 }
+
 /* body{
       display: flex;
 } */
 
-main{
+main {
       display: flex;
       align-items: center;
       gap: 15px;
@@ -15,28 +16,34 @@ main{
       background-color: #2b90ed;
       /* background-color: #494d58; */
       height: 9vh;
+      position: sticky;
+      top: 0;
 }
+
 /* k */
 
-section{
+section {
       display: flex;
 }
-.menus{
-      height:91vh;
+
+.menus {
+      height: 91vh;
       background-color: #f26749;
       flex: 0.3;
       display: flex;
       flex-direction: column;
       gap: 39px;
       padding: 30px 0;
-      top: 0;
+      position: sticky;
+      top: 9vh;
 }
 
-a{
+a {
       text-decoration: none;
       color: black;
 }
-.menu{
+
+.menu {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -45,15 +52,51 @@ a{
       cursor: pointer;
 }
 
-.menu:hover{
+.menu:hover {
       background-color: white;
 }
 
-.active{
+.active {
       background-color: #2b90ed;
 }
 
-.container{
+.container {
       flex: 3;
       background-color: #c9cecf;
 }
+h1,h2{
+      text-align: center;
+}
+
+table {
+      border-collapse: collapse;
+      width: 90%;
+      margin: auto;
+
+}
+
+td{
+      border: 1px solid #dddddd;
+      text-align: center;
+      padding: 8px 0;
+      
+}
+td img{
+      width: 55px;
+      height: 55px;
+}
+td input{
+      width: 3rem;
+}
+td i{
+      cursor: pointer;
+}
+#check-out{
+      padding: 5px 3rem;
+      margin-left: 43%;
+      cursor: pointer;
+}
+
+/* .checkout{
+    
+} */

@@ -15,11 +15,14 @@ main{
       background-color: #2b90ed;
       /* background-color: #494d58; */
       height: 9vh;
+      position: sticky;
+      top: 0;
 }
 /* k */
 
 section{
       display: flex;
+      flex-direction: row;
 }
 .menus{
       height:91vh;
@@ -29,7 +32,8 @@ section{
       flex-direction: column;
       gap: 39px;
       padding: 30px 0;
-      top: 0;
+      position: sticky;
+      top: 9vh;
 }
 
 a{
@@ -56,4 +60,51 @@ a{
 .container{
       flex: 3;
       background-color: #c9cecf;
+}
+
+.container-top{
+      display: flex;
+}
+.box{
+      background-color: #d3a69c;
+      width: 30%;
+      margin: 15px 10px;
+      padding: 12px;
+      border-radius: 9px;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.box-top{
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      padding-bottom: 30px;
+}
+.box-top .material-symbols-outlined{
+      background-color: azure;
+      font-size: 40px;
+}
+.container-center{
+      margin: 0 6rem;
+}
+.td{
+      width: 70%;
+}
+
+.product-card,.td{
+      display: flex;
+      justify-content: space-between;
+      padding-left: 10px;
+      margin: auto;
+}
+.product-card{
+      border-radius: 9px;
+      background-color: #2b90ed;
+      width: 70%;
+      padding: 10px;
+      margin-bottom: 9px;
+      align-items: center;
+}
+.product-card img{
+      width: 55px;
+      height: 55px;
 }

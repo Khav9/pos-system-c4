@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Dashboard</title>
       <link rel="stylesheet" href="css/style.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="js/main.js" defer></script>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
       <main>
             <i class="material-symbols-outlined">shopping_cart_checkout</i>
@@ -47,8 +51,70 @@
 
             </div>
             <div class="container">
-                  <p>DO here</p>
+                  <div class="container-top">
+                        <div class="box">
+                              <div class="box-top">
+                                    <i class="material-symbols-outlined">inventory</i>
+                                    <p>In Stock</p>
+                              </div>
+                              <div class="box-buttom">
+                                    <p id="in-stock">Total : </p>
+                              </div>
+                        </div>
+                        <div class="box">
+                              <div class="box-top">
+                                    <i class="material-symbols-outlined">inventory</i>
+                                    <p>Category</p>
+                              </div>
+                              <div class="box-buttom">
+                                    <p id="name-category">Total : </p>
+                              </div>
+                        </div>
+                        <div class="box">
+                              <div class="box-top">
+                                    <i class="material-symbols-outlined">inventory</i>
+                                    <p>Sold Out</p>
+                              </div>
+                              <div class="box-buttom">
+                                    <p id="nb-sold-out">Total : </p>
+                              </div>
+                        </div>
+                        <div class="box">
+                              <div class="box-top">
+                                    <i class="material-symbols-outlined">inventory</i>
+                                    <p>Incoming</p>
+                              </div>
+                              <div class="box-buttom">
+                                    <p id="incoming">Total : </p>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="container-center">
+                        <h1>Top Products</h1>
+                        <br>
+                  </div>
+                  <div class="td">
+                        <p>Product Image</p>
+                        <p class="id">ID</p>
+                        <p class="name">Product Name</p>
+                        <p class="category">Category</p>
+                        <p class="price">Price</p>
+                        <p class="amount">Amount</p>
+                  </div>
+                  <br>
+                  <div class="container-buttom">
+                        <div class="product-card">
+                              <img src="images/iphone.jpg" alt="">
+                              <p class="id">001</p>
+                              <p class="name">iphone</p>
+                              <p class="category">SmartPhone</p>
+                              <p class="price">$ 199</p>
+                              <p class="amount">30</p>
+                        </div>
+                  </div>
+
             </div>
       </section>
 </body>
+
 </html>
