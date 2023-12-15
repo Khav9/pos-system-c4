@@ -108,3 +108,21 @@ a{
       width: 55px;
       height: 55px;
 }
+/*  */
+
+table {
+      width: 95%;
+      margin: auto;
+      border-collapse: collapse;
+      margin-top: 10px;
+  }
+  thead {
+      background: #54cddf;
+  }
+  tr,td,th {
+      border: 1px solid;
+      padding: 10px;
+  }
+  tr:nth-child(even) {
+      background: #e7f2f4;
+  }

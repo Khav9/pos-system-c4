@@ -1,4 +1,4 @@
-const btnNexProduct = document.getElementById('add-new-product');
+const btnNewProduct = document.getElementById('add-new-product');
 const search = document.getElementById('search');
 const groupCard = document.querySelector('.contaner-buttom');
 const btnSubmit = document.getElementById('submit');
@@ -121,7 +121,7 @@ function editData(event) {
       // editor = index
 
       // show(btnUpdate)
-      // hide(btnNexProduct)
+      // hide(btnNewProduct)
 }
 
 function deleteData(event) {
@@ -140,11 +140,12 @@ function deleteData(event) {
 function onCreate() {
       let newProduct = {
             name: document.getElementById('name-product').value,
-            image: document.getElementById('avatar').src,
+            image: document.getElementById('avatar').value,
             category: 'smartphone',
-            quanlityall: document.getElementById('quality'),
-            price: document.getElementById('price'),
+            quanlityall: document.getElementById('quality').value,
+            price: document.getElementById('price').value,
       };
+      console.log(newProduct.image)
 
       if (editor === null) {
             listData.listProducts.push(newProduct);
@@ -161,13 +162,13 @@ function onCreate() {
 function newProduct() {
       hide(ContainerTop);
       hide(ContainerButtom);
-      console.log(listData);
+      ContainerAdd.style.display = 'block'
 }
 
 function onCancel() {
       hide(ContainerAdd);
       show(ContainerTop);
-      show(ContainerButtom);
+      ContainerButtom.style.display = 'grid';
 }
 
 function addCard(event) {
@@ -177,9 +178,10 @@ function addCard(event) {
 
 //
 show(ContainerTop);
-show(ContainerButtom);
+ContainerButtom.style.display = 'grid';
 hide(ContainerAdd)
-// btnNexProduct.addEventListener('click', onCreate)
-btnNexProduct.addEventListener('click', newProduct)
+
+// btnNewProduct.addEventListener('click', onCreate)
+btnNewProduct.addEventListener('click', newProduct)
 btnSubmit.addEventListener('click', onCreate)
 btnCancel.addEventListener('click', onCancel)
