@@ -8,18 +8,15 @@ const btnCancel = document.getElementById('cancel');
 const ContainerTop = document.querySelector('.container-top');
 const ContainerAdd = document.querySelector('.box-add');
 const ContainerButtom = document.querySelector('.contaner-buttom');
-
+const table = document.querySelector('table');
 
 
 let editor = null;
 //
+
 let listData = {
-      listProducts: [
-            { name: 'iphone', image: '../images/iphone.jpg', category: 'smartphone', quanlityall: '9', price: '199' },
-            { name: 'iphone', image: '../images/iphone.jpg', category: 'smartphone', quanlityall: '3', price: '199' },
-      ],
-
-
+      listProducts: [],
+      latestId: null,
 }
 
 function saveData() {
@@ -32,7 +29,7 @@ function loadData() {
             listData = loadData
       }
       else {
-            saveProducts()
+            saveData();
       }
 }
 
@@ -45,121 +42,94 @@ function show(element) {
 }
 
 function renderProduct() {
-      // listData();
+      loadData();
 
       let productData = listData.listProducts;
 
+      document.querySelector('tbody').remove();
+
+      let newTbody = document.createElement('tbody');
+
       for (let index in productData) {
-            let divCard = document.createElement('div');
-            divCard.className = 'card';
-            divCard.dataset.index = index;
+            console.log(index);
+            let tableRow = document.createElement('tr');
+            tableRow.dataset.index = index;
 
-            let divImage = document.createElement('img');
-            divImage.src = productData[index].image;
-            let divId = document.createElement('p');
-            divId.className = 'id';
-            divId.textContent = index;
-            let divName = document.createElement('p');
-            divName.textContent = productData[index].name;
+            let tdID = document.createElement('td');
+            tdID.textContent = productData[index].id;
 
-            let divValue = document.createElement('div');
-            divValue.className = 'value';
-            let divStock = document.createElement('p');
-            divStock.className = 'stock';
-            //need update____
-            divStock.textContent = 'In Stock : ' + '9';
-            let divPrice = document.createElement('p');
-            divPrice.className = 'price';
-            divPrice.textContent = '$ ' + productData[index].price;
+            let tdName = document.createElement('td');
+            tdName.textContent = productData[index].name;
 
-            divValue.appendChild(divStock)
-            divValue.appendChild(divPrice)
+            let tdCategory = document.createElement('td');
+            tdCategory.textContent = productData[index].category;
 
-            let divAction = document.createElement('div');
-            divAction.className = 'button';
+            let tdQulity = document.createElement('td');
+            tdQulity.textContent = productData[index].quanlityall;
+
+            let tdPrice = document.createElement('td');
+            tdPrice.textContent = productData[index].price;
+
+            let tdAction = document.createElement('td');
+
+            let btnSummary = document.createElement('i');
+            btnSummary.className = 'material-symbols-outlined';
+            btnSummary.textContent = 'visibility';
+
+            let btnAdd = document.createElement('i');
+            btnAdd.className = 'material-symbols-outlined';
+            btnAdd.textContent = 'add_shopping_cart';
 
             let btnEdit = document.createElement('i');
             btnEdit.className = 'material-symbols-outlined';
             btnEdit.textContent = 'edit';
-            btnEdit.addEventListener('click', editData)
 
-            let btnAddTOCard = document.createElement('i');
-            btnAddTOCard.className = 'material-symbols-outlined add';
-            btnAddTOCard.textContent = 'add';
-            btnAddTOCard.addEventListener('click', addCard)
-
-            let btnDelete = document.createElement('i');
+            let btnDelete= document.createElement('i');
             btnDelete.className = 'material-symbols-outlined';
-            btnDelete.textContent = 'delete'
-            btnDelete.addEventListener('click', deleteData)
+            btnDelete.textContent = 'delete';
 
-            divAction.appendChild(btnEdit)
-            divAction.appendChild(btnAddTOCard)
-            divAction.appendChild(btnDelete)
+            tdAction.appendChild(btnSummary);
+            tdAction.appendChild(btnAdd);
+            tdAction.appendChild(btnEdit);
+            tdAction.appendChild(btnDelete);
+            
+            tableRow.appendChild(tdID);
+            tableRow.appendChild(tdName);
+            tableRow.appendChild(tdCategory);
+            tableRow.appendChild(tdQulity);
+            tableRow.appendChild(tdPrice);
+            tableRow.appendChild(tdAction);
 
-            divCard.appendChild(divImage)
-            divCard.appendChild(divId)
-            divCard.appendChild(divName)
-            divCard.appendChild(divValue)
-            divCard.appendChild(divAction)
-
-            //
-            groupCard.appendChild(divCard)
+            newTbody.appendChild(tableRow)
       }
-
-}
-
-function editData(event) {
-      let index = event.target.closest('.card').dataset.index;
-      console.log(index);
-
-      // console.log(listData.listProducts[index]);
-
-      // document.getElementById('fname').value = listUsers[index].firstName
-      // document.getElementById('lname').value = listUsers[index].lastName
-
-      // editor = index
-
-      // show(btnUpdate)
-      // hide(btnNewProduct)
-}
-
-function deleteData(event) {
-      let index = event.target.closest('.card');
-
-      // let fullName = listUsers[index].firstName + listUsers[index].lastName;
-
-      if (confirm('Are you sure you want to delete ')) {
-            listData.listProducts.splice(index, 1)
-      }
-
-      // saveData();
-      // renderProduct();
+      table.appendChild(newTbody);
 }
 
 function onCreate() {
+      let proId = listData.latestId;
+      if (proId === null || listData.listProducts.length === 0) {
+          proId = 1;
+      } else {
+          proId = proId + 1;
+      }
+
+      listData.latestId = proId;
       let newProduct = {
+            id : proId,
             name: document.getElementById('name-product').value,
-            image: document.getElementById('avatar').value,
             category: 'smartphone',
             quanlityall: document.getElementById('quality').value,
             price: document.getElementById('price').value,
       };
-      console.log(newProduct.image)
 
-      if (editor === null) {
-            listData.listProducts.push(newProduct);
-      } else {
-            listData.listProducts[editor] = newProduct;
-            editor = null;
+      listData.listProducts.push(newProduct);
 
-      }
+      saveData();
 
-      // saveData();
       renderProduct();
 }
 
-function newProduct() {
+function formNewPro() {
       hide(ContainerTop);
       hide(ContainerButtom);
       ContainerAdd.style.display = 'block'
@@ -181,7 +151,13 @@ show(ContainerTop);
 ContainerButtom.style.display = 'grid';
 hide(ContainerAdd)
 
-// btnNewProduct.addEventListener('click', onCreate)
-btnNewProduct.addEventListener('click', newProduct)
+//
+
+btnNewProduct.addEventListener('click', formNewPro)
+
+loadData();
+renderProduct()
+
 btnSubmit.addEventListener('click', onCreate)
+
 btnCancel.addEventListener('click', onCancel)
