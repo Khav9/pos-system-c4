@@ -15,6 +15,8 @@ main{
       background-color: #2b90ed;
       /* background-color: #494d58; */
       height: 9vh;
+      position: sticky;
+      top: 0;
 }
 /* k */
 
@@ -29,7 +31,8 @@ section{
       flex-direction: column;
       gap: 39px;
       padding: 30px 0;
-      top: 0;
+      position: sticky;
+      top: 9vh;
 }
 
 a{
@@ -57,3 +60,79 @@ a{
       flex: 3;
       background-color: #c9cecf;
 }
+
+
+/* btn*/
+.header {
+      display: flex;
+      margin-top: 25px;
+      padding-left: 40px;
+      flex-direction: row;
+      justify-content: space-between;
+}
+
+input {
+      width: 30%;
+      margin-right: 45px;
+}
+
+.add_btn {
+      display: flex;
+      padding: 5px 10px;
+      background: #2f3032;
+      align-items: center;
+}
+
+
+/* ......////teable */
+table {
+      width: 93%;
+      margin: 39px;
+      border: 1px solid black;
+      border-collapse: collapse;
+}
+
+th,
+td {
+      border: 1px solid black;
+      padding: 10px;
+}
+
+tr,
+td {
+      text-align: center;
+}
+
+.action {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-evenly;
+}
+
+/* .....form update... */
+form[action="Update"]{
+      display: flex;
+      width: 50%;
+      height: 60vh;
+      background:#bfb2a1a5; 
+      background: #108fde; 
+      border-radius: 20px;
+      margin: 30px 300px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+}
+input[type="text"]{
+      width: 70%;
+      height: 30px;
+      margin-left: 90px;
+      border-radius: 6px;
+}
+
+.btn{
+      width: 25%;
+      padding: 5px;
+      margin-left: 230px;
+} 
+
