@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Dashboard</title>
+      <link rel="stylesheet" href="../../css/product.css">
+      <script src="../js/product.js" defer></script>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+      <main>
+            <i class="material-symbols-outlined">shopping_cart_checkout</i>
+            <h1>Pos Sytem</h1>
+      </main>
+      <section>
+            <div class="menus">
+                  <a href="../index.html">
+                        <div class="menu">
+                              <i class="material-symbols-outlined">dashboard</i>
+                              <p>Dashboard</p>
+                        </div>
+                  </a>
+                  <a href="#">
+                        <div class="menu active">
+                              <i class="material-symbols-outlined">shopping_cart</i>
+                              <p>Products</p>
+                        </div>
+                  </a>
+                  <a href="category.html">
+                        <div class="menu">
+                              <i class="material-symbols-outlined">space_dashboard</i>
+                              <p>Category</p>
+                        </div>
+                  </a>
+                  <a href="order.html">
+                        <div class="menu">
+                              <i class="material-symbols-outlined">shopping_cart_checkout</i>
+                              <p>Order</p>
+                        </div>
+                  </a>
+                  <a href="history.html">
+                        <div class="menu">
+                              <i class="material-symbols-outlined">pending_actions</i>
+                              <p>History</p>
+                        </div>
+                  </a>
+            </div>
+            <div class="container">
+                  <div class="container-top">
+                        <button id="add-new-product">
+                              <i class="material-symbols-outlined">add</i>
+                              <p>Product</p>
+                        </button>
+                        <div class="fitter">
+                              <p>Fitter by Category</p>
+                              <select class="inputbox" name="item_type" required>
+                                    <option value="">--Select a Card Type--</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="RuPay">RuPay</option>
+                                    <option value="MasterCard">MasterCard</option>
+                              </select>
+                        </div>
+                        <div class="bar-search">
+                              <input type="search" id="search" placeholder="Search products name">
+                              <i class="material-symbols-outlined">search</i>
+                        </div>
+                  </div>
+                  <div class="box-add">
+                        <h1>Add New Product</h1>
+                        <div class="form-new-product">
+                              <input type="text" id="name-product" name="name-product" placeholder="Name Of Product" required="">
+                              <input type="number" id="quality" name="quality" placeholder="Quanlity" required="" min="0">
+                              <input type="number" id="price" name="price" placeholder="Price Of Product" required="" min="0">
+                              <select class="type-category" name="type-category" required>
+                                    <option value="">--Select a Card Type--</option>
+                                    <option value="Visa">Visa</option>
+                                    <option value="RuPay">RuPay</option>
+                                    <option value="MasterCard">MasterCard</option>
+                              </select>
+                              <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg" />
+                              <div class="btn-add">
+                                    <button id="cancel">CANCEL</button>
+                                    <button id="submit">ADD</button>
+                              </div>
+                        </div>
+                  </div>
+                  <div class="contaner-buttom">
+                        <div class="card">
+                              <img src="../images/iphone.jpg" alt="">
+                              <p class="id">01</p>
+                              <p class="name">iphon9</p>
+                              <div class="value">
+                                    <p class="stock">In Stock : 9</p>
+                                    <p class="price">$ 110</p>
+                              </div>
+                              <div class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                    <i class="material-symbols-outlined add">add</i>
+                                    <i class="material-symbols-outlined">delete</i>
+                              </div>
+                        </div>
+                        <div class="card">
+                              <img src="../images/iphone.jpg" alt="">
+                              <p class="id">02</p>
+                              <p class="name">iphon9</p>
+                              <div class="value">
+                                    <p class="stock">In Stock : 9</p>
+                                    <p class="price">$ 110</p>
+                              </div>
+                              <div class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                    <i class="material-symbols-outlined add">add</i>
+                                    <i class="material-symbols-outlined">delete</i>
+                              </div>
+                        </div>
+                        <div class="card">
+                              <img src="../images/iphone.jpg" alt="">
+                              <p class="id">03</p>
+                              <p class="name">iphon9</p>
+                              <div class="value">
+                                    <p class="stock">In Stock : 9</p>
+                                    <p class="price">$ 110</p>
+                              </div>
+                              <div class="button">
+                                    <i class="material-symbols-outlined">edit</i>
+                                    <i class="material-symbols-outlined add">add</i>
+                                    <i class="material-symbols-outlined">delete</i>
+                              </div>
+                        </div>
+                  </div>
+            </div>
+      </section>
+</body>
+
+</html>
