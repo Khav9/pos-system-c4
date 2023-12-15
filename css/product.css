@@ -109,59 +109,6 @@ a {
       border: 1px solid white;
 }
 
-.contaner-buttom {
-      display: grid;
-      grid-template-columns: repeat(6, 1fr);
-      gap: 20px;
-      margin: 20px;
-}
-
-.card {
-      background-color: coral;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
-      border-radius: 9px;
-
-}
-
-.id {
-      background-color: rgb(37, 31, 31);
-      color: white;
-      position: relative;
-      padding: 5px;
-      top: -22.8vh;
-      right: 8.5vh;
-      border-radius: 3px;
-}
-
-.card img {
-      width: 70%;
-      height: 54%;
-      margin-top: 20px;
-      border-radius: 9px;
-}
-
-.value {
-      display: flex;
-      gap: 25px;
-}
-
-.button {
-      display: flex;
-      gap: 25px;
-}
-
-.button .material-symbols-outlined {
-      cursor: pointer;
-      margin-bottom: 10px;
-}
-
-.add {
-      background-color: #c9cecf;
-}
-
 /*  */
 
 .box-add {
@@ -233,3 +180,20 @@ a {
 button{
       cursor: pointer;
 }
+/*  */
+table {
+      width: 95%;
+      margin: auto;
+      border-collapse: collapse;
+      margin-top: 10px;
+  }
+  thead {
+      background: #54cddf;
+  }
+  tr,td,th {
+      border: 1px solid;
+      padding: 10px;
+  }
+  tr:nth-child(even) {
+      background: #e7f2f4;
+  }
