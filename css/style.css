@@ -3,17 +3,14 @@
       padding: 0;
       box-sizing: border-box;
 }
-/* body{
-      display: flex;
-} */
 
 main{
       display: flex;
       align-items: center;
       gap: 15px;
       padding-left: 15px;
-      background-color: #2b90ed;
-      /* background-color: #494d58; */
+      background-color: #16242F;
+      color: white;
       height: 9vh;
       position: sticky;
       top: 0;
@@ -26,7 +23,7 @@ section{
 }
 .menus{
       height:91vh;
-      background-color: #f26749;
+      background-color: #192A3C;
       flex: 0.3;
       display: flex;
       flex-direction: column;
@@ -38,7 +35,7 @@ section{
 
 a{
       text-decoration: none;
-      color: black;
+      color: white;
 }
 .menu{
       display: flex;
@@ -50,11 +47,11 @@ a{
 }
 
 .menu:hover{
-      background-color: white;
+      background-color: black;
 }
 
 .active{
-      background-color: #2b90ed;
+      background-color: #E76F51;
 }
 
 .container{
@@ -66,7 +63,7 @@ a{
       display: flex;
 }
 .box{
-      background-color: #d3a69c;
+      background-color: #0a0877;
       width: 30%;
       margin: 15px 10px;
       padding: 12px;
@@ -80,12 +77,28 @@ a{
       padding-bottom: 30px;
 }
 .box-top .material-symbols-outlined{
-      background-color: azure;
+      color:  #16242F;
       font-size: 40px;
+}
+.box-buttom p{
+      padding-left: 7rem;
+}
+.boxone{
+      background-color: #2C9C8F;
+}
+.boxtwo{
+      background-color: #E9C56D;
+}
+.boxthree{
+      background-color: #F0A261;
+}
+.boxfour{
+      background-color: #E76F51;
 }
 .container-center{
       margin: 0 6rem;
 }
+
 .td{
       width: 70%;
 }
