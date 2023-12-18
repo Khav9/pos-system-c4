@@ -42,12 +42,6 @@
                               <p>Order</p>
                         </div>
                   </a>
-                  <a href="history.html">
-                        <div class="menu">
-                              <i class="material-symbols-outlined">pending_actions</i>
-                              <p>History</p>
-                        </div>
-                  </a>
             </div>
             <div class="container">
                   <div class="container-top">
@@ -58,11 +52,13 @@
                         <div class="fitter">
                               <p>Fitter by Category</p>
                               <select class="inputbox" name="item_type" required>
-                                    <option value="">--Select a Card Type--</option>
-                                    <option value="Visa">Visa</option>
-                                    <option value="RuPay">RuPay</option>
-                                    <option value="MasterCard">MasterCard</option>
+                                    <!-- <option value="">--Select a Card Type--</option>
+                                    <option value="SmartPhone">SmartPhone</option>
+                                    <option value="Labtop">Labtop</option>
+                                    <option value="Car">Car</option> -->
                               </select>
+                              <button id="clear-fitter">Clear Fitter</button>
+
                         </div>
                         <div class="bar-search">
                               <input type="search" id="search" placeholder="Search products name">
@@ -72,20 +68,27 @@
                   <div class="box-add">
                         <h1>Add New Product</h1>
                         <div class="form-new-product">
-                              <input type="text" id="name-product" name="name-product" placeholder="Name Of Product" required="">
-                              <input type="number" id="quality" name="quality" placeholder="Quanlity" required="" min="0">
-                              <input type="number" id="price" name="price" placeholder="Price Of Product" required="" min="0">
-                              <select class="type-category" name="type-category" required>
-                                    <option value="">--Select a Card Type--</option>
-                                    <option value="Visa">Visa</option>
-                                    <option value="RuPay">RuPay</option>
-                                    <option value="MasterCard">MasterCard</option>
-                              </select>
-                              <input type="file" id="avatar" name="avatar" accept="image/png, image/jpeg, image/jpg" />
-                              <div class="btn-add">
-                                    <button id="cancel">CANCEL</button>
-                                    <button id="submit">ADD</button>
+                              <div class="form-detail">
+                                    <input type="text" id="name-product" name="name-product"
+                                          placeholder="Name Of Product" required="">
+                                    <input type="number" id="quality" name="quality" placeholder="Quanlity" required=""
+                                          min="0">
+                                    <input type="number" id="price" name="price" placeholder="Price Of Product"
+                                          required="" min="0">
+                                    <select class="type-category" name="type-category" required>
+                                          <!-- <option value="">--Select a Card Type--</option>
+                                          <option value="SmartPhone">SmartPhone</option>
+                                          <option value="Labtop">Labtop</option>
+                                          <option value="Car">Car</option> -->
+                                    </select>
                               </div>
+                              <div class="form-btn">
+                                    <div class="btn-add">
+                                          <button id="cancel">CANCEL</button>
+                                          <button id="submit">ADD</button>
+                                    </div>
+                              </div>
+
                         </div>
                   </div>
                   <div class="contaner-buttom">
@@ -101,22 +104,50 @@
                                     </tr>
                               </thead>
                               <tbody>
-                                    <!-- <tr>
+                                    <tr>
                                           <td>01</td>
                                           <td>Yon</td>
                                           <td>2010</td>
                                           <td>sdfgh</td>
                                           <td>10</td>
-                                          <td>
+                                          <td class="action">
                                                 <i class="material-symbols-outlined">visibility</i>
                                                 <i class="material-symbols-outlined">add_shopping_cart</i>
                                                 <i class="material-symbols-outlined">edit</i>
-                                                <i class="material-symbols-outlined">delete</i>
+                                                <i class="material-symbols-outlined delete">delete</i>
                                           </td>
-                                    </tr> -->
+                                    </tr>
+
                               </tbody>
                         </table>
                   </div>
+                  <div class="detail">
+                        <i class="material-symbols-outlined">cancel</i>
+                        <div id="detail-docu">
+                              <h1>Product Detail</h1>
+                              <p id="dName">Name : banana</p>
+                              <p id="dCategory">Category : fruit</p>
+                              <p id="dquanlity">Quanlity : 10</p>
+                              <p id="dqStock">Quanlity in stock : 5</p>
+                              <h3>history of sold out</h3>
+                              <div class="solds">
+                                    <div class="sold-out">
+                                          <p>No : 1</p>
+                                          <p>Date : 16/12/2023</p>
+                                          <p>Total : $ 6</p>
+                                          <p>Total Price : $ 12</p>
+                                    </div>
+                                    <div class="sold-out">
+                                          <p>No : 1</p>
+                                          <p>Date : 16/12/2023</p>
+                                          <p>Total : $ 6</p>
+                                          <p>Total Price : $ 12</p>
+                                    </div>
+                              </div>
+
+                        </div>
+                  </div>
+
             </div>
       </section>
 </body>

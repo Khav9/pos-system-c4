@@ -4,17 +4,14 @@
       box-sizing: border-box;
 }
 
-/* body{
-      display: flex;
-} */
 
 main {
       display: flex;
       align-items: center;
       gap: 15px;
       padding-left: 15px;
-      background-color: #2b90ed;
-      /* background-color: #494d58; */
+      background-color:  #16242F;
+      color: white;
       height: 9vh;
       position: sticky;
       top: 0;
@@ -28,7 +25,7 @@ section {
 
 .menus {
       height: 91vh;
-      background-color: #f26749;
+      background-color: #192A3C;
       flex: 0.3;
       display: flex;
       flex-direction: column;
@@ -40,7 +37,7 @@ section {
 
 a {
       text-decoration: none;
-      color: black;
+      color: white;
 }
 
 .menu {
@@ -53,11 +50,11 @@ a {
 }
 
 .menu:hover {
-      background-color: white;
+      background-color: black;
 }
 
 .active {
-      background-color: #2b90ed;
+      background-color: #E76F51;
 }
 
 /* kk */
@@ -76,7 +73,7 @@ a {
       display: flex;
       align-items: center;
       gap: 5px;
-      padding: 6px;
+      padding: 2px;
       cursor: pointer;
 }
 
@@ -87,13 +84,16 @@ a {
       gap: 20px;
 }
 
+.inputbox {
+      padding: 10px;
+}
+
 .bar-search {
       width: 33%;
       display: flex;
       align-items: center;
       gap: 10px;
       justify-content: flex-end;
-
 }
 
 .bar-search .material-symbols-outlined {
@@ -103,10 +103,15 @@ a {
 #search {
       width: 80%;
       height: 30px;
-      padding: 0 0 0 20px;
+      padding: 10px;
       border-radius: 9px;
       outline: none;
       border: 1px solid white;
+}
+
+#clear-fitter {
+      padding: 7px;
+      border: none;
 }
 
 /*  */
@@ -115,12 +120,11 @@ a {
       height: 87vh;
       margin: auto;
       margin: 10px;
-      /* background-color: #302b63; */
       border-radius: 9px;
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.box-add h1{
+.box-add h1 {
       text-align: center;
       padding-top: 30px;
       padding-bottom: 30px;
@@ -128,7 +132,7 @@ a {
 }
 
 .form-new-product {
-      width: 69%;
+      width: 100%;
       margin: auto;
       display: flex;
       flex-direction: column;
@@ -136,7 +140,15 @@ a {
       gap: 21px;
 }
 
-.form-new-product select {
+.form-detail{
+      width: 100%;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 21px;
+}
+.form-detail select {
       width: 60%;
       display: flex;
       padding: 10px;
@@ -145,17 +157,18 @@ a {
       border-radius: 5px;
 }
 
-.form-new-product input {
+.form-detail input {
       width: 60%;
       padding: 10px;
       border: none;
       outline: none;
 }
+.form-btn{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 20px;
 
-#avatar {
-      height: inherit;
-      cursor: pointer;
-      padding: 10px;
 }
 
 .btn-add {
@@ -169,7 +182,7 @@ a {
       margin-bottom: 30px;
       width: 60%;
       padding: 10px;
-      margin-left: 24rem;
+      margin-left: 37rem;
 }
 
 #cancel {
@@ -177,23 +190,100 @@ a {
       padding: 10px;
       margin-bottom: 30px;
 }
-button{
+
+.btn-add button:hover {
       cursor: pointer;
+      box-shadow: 0 0 0 2px #fff, 0 0 0 5px #f26749;
+      transition: .4s;
+      border-radius: 6px;
 }
+
 /*  */
 table {
       width: 95%;
       margin: auto;
       border-collapse: collapse;
       margin-top: 10px;
-  }
-  thead {
+}
+
+thead {
       background: #54cddf;
-  }
-  tr,td,th {
+}
+
+tr,
+td,
+th {
       border: 1px solid;
       padding: 10px;
-  }
-  tr:nth-child(even) {
+}
+
+tr:nth-child(even) {
       background: #e7f2f4;
-  }
+}
+
+.action {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border: none;
+}
+.delete{
+      color: red;
+}
+
+.action .material-symbols-outlined:hover {
+      color: green;
+      cursor: pointer;
+}
+
+/* detail document */
+.detail {
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.432);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+
+.detail i {
+      position: relative;
+      color: red;
+      top: -25vh;
+      left: 65vh;
+      cursor: pointer;
+}
+
+#detail-docu {
+      width: 30%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0 0 10px 15px;
+      color: white;
+
+}
+
+#detail-docu h1,
+h3 {
+      text-align: center;
+      padding-top: 10px;
+}
+
+.solds {
+      padding-right: 15px;
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+      color: black;
+}
+
+.sold-out {
+      background-color: white;
+      padding: 5px;
+}
