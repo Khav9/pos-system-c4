@@ -3,29 +3,25 @@
       padding: 0;
       box-sizing: border-box;
 }
-/* body{
-      display: flex;
-} */
-
 main{
       display: flex;
       align-items: center;
       gap: 15px;
       padding-left: 15px;
-      background-color: #2b90ed;
-      /* background-color: #494d58; */
+      background-color:  #16242F;
+      color: white;
       height: 9vh;
       position: sticky;
       top: 0;
 }
-/* k */
+
 
 section{
       display: flex;
 }
 .menus{
       height:91vh;
-      background-color: #f26749;
+      background-color: #192A3C;
       flex: 0.3;
       display: flex;
       flex-direction: column;
@@ -37,7 +33,7 @@ section{
 
 a{
       text-decoration: none;
-      color: black;
+      color: white;
 }
 .menu{
       display: flex;
@@ -49,18 +45,17 @@ a{
 }
 
 .menu:hover{
-      background-color: white;
+      background-color: black;
 }
 
 .active{
-      background-color: #2b90ed;
+      background-color: #E76F51;
 }
 
 .container{
       flex: 3;
       background-color: #c9cecf;
 }
-
 
 /* btn*/
 .header {
@@ -74,14 +69,11 @@ a{
 input {
       width: 30%;
       margin-right: 45px;
+      border-radius: 10px;
+      border: none;
+      padding: 15px;
 }
 
-.add_btn {
-      display: flex;
-      padding: 5px 10px;
-      background: #2f3032;
-      align-items: center;
-}
 
 
 /* ......////teable */
@@ -94,7 +86,7 @@ table {
 
 th,
 td {
-      border: 1px solid black;
+      border: 1px solid;
       padding: 10px;
 }
 
@@ -105,13 +97,36 @@ td {
 
 .action {
       display: flex;
-      gap: 30px;
-      align-items: center;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      border: none;
+      border-bottom:1px solid black ;
+}
+.action .delete{
+      color: rgba(255, 0, 0, 0.603);
+}
+.action .edit{
+      color: rgba(0, 128, 0, 0.76);
+}
+.action .delete:hover{
+      color: red;
+}
+.action i{
+      cursor: pointer;
 }
 
 /* .....form update... */
-form[action="Update"]{
+.form{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.637);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+}
+#form {
       display: flex;
       width: 50%;
       height: 60vh;
@@ -128,11 +143,36 @@ input[type="text"]{
       height: 30px;
       margin-left: 90px;
       border-radius: 6px;
+      padding: 20px;
+      border: none;
 }
 
-.btn{
+.btn-create,
+.bnt-cancel{
       width: 25%;
-      padding: 5px;
+      padding: 10px;
       margin-left: 230px;
+      display: flex;
+      justify-content: center;
+      border: none;
+      border-radius: 6px;
 } 
+.btn-create:hover,.bnt-cancel:hover, button:hover{
+      box-shadow: 0 0 0 2px #fff, 0 0 0 5px #f26749;
+      transition: .4s;
+}
+
+.add_btn {
+      display: flex;
+      align-items: center;
+}
+
+button {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+}
+ 
 

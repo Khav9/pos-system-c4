@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Dashboard</title>
       <link rel="stylesheet" href="../../css/category.css">
-      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+      <script src="../js/category.js" defer></script>
+      <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
+
 <body>
       <main>
             <i class="material-symbols-outlined">shopping_cart_checkout</i>
@@ -38,48 +42,38 @@
                               <p>Order</p>
                         </div>
                   </a>
-                  <a href="history.html">
-                        <div class="menu">
-                              <i class="material-symbols-outlined">pending_actions</i>
-                              <p>History</p>
-                        </div>
-                  </a>
-
             </div>
             <div class="container">
-                   <div class="header">
+                  <div class="header">
                         <div class="add_btn">
-                              <li class="material-symbols-outlined" style="font-size:23px;color:rgb(236, 176, 187);">add
-                              </li>
-                              <button>Category</button>
+                              <button id="show-form"><i class="material-symbols-outlined">add</i>Category</button>
                         </div>
-                        <input type="search" placeholder="search new the category">
-                  </div> 
+                        <input type="search" id="searchCategory" placeholder="Search category">
+
+                  </div>
                   <table>
-                        <tr>
-                              <th>Category ID</th>
-                              <th>Category Name</th>
-                              <th>Action</th>
-                        </tr>
-                        <tbody>
+                        <thead>
                               <tr>
-                                    <td>001</td>
-                                    <td>iphone</td>
-                                    <td class="action">
-                                          <li class="material-symbols-outlined"
-                                                style="font-size:30px;color:rgb(225, 18, 56);"> delete</li>
-                                          <li class="material-symbols-outlined">edit</li>
-                                    </td>
+                                    <th>Category ID</th>
+                                    <th>Category Name</th>
+                                    <th>Action</th>
                               </tr>
+                        </thead>
+                        <tbody>
+                             
                         </tbody>
                   </table>
                   <!-- <addform > -->
-                  <form action="Update">
-                        <input type="text" placeholder="your name">
-                        <input type="text" placeholder="description">
-                        <button class="btn">Update</button>
-                     </form>
+                  <div class="form">
+                        <div id="form">
+                              <input type="text" id="name" placeholder="Category id">
+                              <input type="text" id="descript" placeholder="Name category">
+                              <button class="btn-create" onclick="onCreate()">create</button>
+                              <button class="bnt-cancel">Cancel</button>
+                        </div>
+                  </div>
             </div>
       </section>
 </body>
+
 </html>
