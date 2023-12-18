@@ -3,18 +3,13 @@
       padding: 0;
       box-sizing: border-box;
 }
-
-/* body{
-      display: flex;
-} */
-
 main {
       display: flex;
       align-items: center;
       gap: 15px;
       padding-left: 15px;
-      background-color: #2b90ed;
-      /* background-color: #494d58; */
+      background-color:  #16242F;
+      color: white;
       height: 9vh;
       position: sticky;
       top: 0;
@@ -28,7 +23,7 @@ section {
 
 .menus {
       height: 91vh;
-      background-color: #f26749;
+      background-color: #192A3C;
       flex: 0.3;
       display: flex;
       flex-direction: column;
@@ -40,7 +35,7 @@ section {
 
 a {
       text-decoration: none;
-      color: black;
+      color: white;
 }
 
 .menu {
@@ -53,50 +48,57 @@ a {
 }
 
 .menu:hover {
-      background-color: white;
+      background-color: black;
 }
 
 .active {
-      background-color: #2b90ed;
+      background-color: #E76F51;
 }
 
 .container {
       flex: 3;
+      /* width: 90%; */
       background-color: #c9cecf;
 }
-h1,h2{
+
+h1,
+h2 {
       text-align: center;
 }
 
 table {
       border-collapse: collapse;
-      width: 90%;
+      width: 70%;
       margin: auto;
-
 }
 
-td{
-      border: 1px solid #dddddd;
+tr:nth-child(even) {
+      background: #e7f2f4;
+}
+
+tr,
+td {
+      padding: 10px;
+}
+
+td {
+      border: 1px solid black;
       text-align: center;
       padding: 8px 0;
-      
 }
-td img{
-      width: 55px;
-      height: 55px;
+
+td input {
+      width: 6rem;
 }
-td input{
-      width: 3rem;
-}
-td i{
+
+td i {
       cursor: pointer;
+      color: red;
 }
-#check-out{
+
+#check-out {
       padding: 5px 3rem;
       margin-left: 43%;
       cursor: pointer;
+      margin-bottom: 3rem;
 }
-
-/* .checkout{
-    
-} */
