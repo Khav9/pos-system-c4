@@ -52,6 +52,18 @@ a {
 .menu:hover {
       background-color: black;
 }
+#order{
+      position: relative;
+      top: 18px;
+      left: 15px;
+      color: white;
+      width: 24px;
+      height: 24px;
+      background-color: red;
+      padding: 3px;
+      border-radius:59%;
+      text-align: center;
+}
 
 .active {
       background-color: #E76F51;
@@ -103,6 +115,7 @@ a {
 #search {
       width: 80%;
       height: 30px;
+      /* padding: 0 0 0 20px; */
       padding: 10px;
       border-radius: 9px;
       outline: none;
@@ -112,6 +125,7 @@ a {
 #clear-fitter {
       padding: 7px;
       border: none;
+
 }
 
 /*  */
@@ -120,6 +134,7 @@ a {
       height: 87vh;
       margin: auto;
       margin: 10px;
+      /* background-color: #302b63; */
       border-radius: 9px;
       box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
