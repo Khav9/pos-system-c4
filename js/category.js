@@ -103,6 +103,8 @@ function onCreate() {
     renderCategory();
 
     form.style.display = 'none';
+    document.getElementById('name').value = "";
+    document.getElementById('descript').value = "";
 }
 
 function onDelete(e){
