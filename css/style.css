@@ -50,6 +50,19 @@ a{
       background-color: black;
 }
 
+#order{
+      width: 24px;
+      height: 24px;
+      background-color: red;
+      position: relative;
+      top: 18px;
+      left: 15px;
+      color: white;
+      padding: 3px;
+      border-radius:59%;
+      text-align: center;
+}
+
 .active{
       background-color: #E76F51;
 }
@@ -82,6 +95,8 @@ a{
 }
 .box-buttom p{
       padding-left: 7rem;
+      padding-bottom: 30px;
+      font-size: 20px;
 }
 .boxone{
       background-color: #2C9C8F;
@@ -95,6 +110,7 @@ a{
 .boxfour{
       background-color: #E76F51;
 }
+
 .container-center{
       margin: 0 6rem;
 }

@@ -51,6 +51,18 @@ a {
       background-color: black;
 }
 
+#order{
+      position: relative;
+      top: 18px;
+      left: 15px;
+      color: white;
+      width: 24px;
+      height: 24px;
+      background-color: red;
+      padding: 3px;
+      border-radius:59%;
+      text-align: center;
+}
 .active {
       background-color: #E76F51;
 }
