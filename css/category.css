@@ -14,7 +14,7 @@ main{
       position: sticky;
       top: 0;
 }
-
+/* k */
 
 section{
       display: flex;
@@ -51,7 +51,18 @@ a{
 .active{
       background-color: #E76F51;
 }
-
+#order{
+      position: relative;
+      top: 18px;
+      left: 15px;
+      color: white;
+      width: 24px;
+      height: 24px;
+      background-color: red;
+      padding: 3px;
+      border-radius:59%;
+      text-align: center;
+}
 .container{
       flex: 3;
       background-color: #c9cecf;
@@ -174,5 +185,3 @@ button {
       border: none;
       border-radius: 10px;
 }
- 
-
