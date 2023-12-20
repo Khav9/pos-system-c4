@@ -213,8 +213,9 @@ function onCancel() {
 function deleteData(e) {
       let index = e.target.closest('tr').dataset.index;
       let namePro = listData.listProducts[index].name;
-      if (confirm('Are you sure you want to delete " ' + namePro + '" ?'));
-      listData.listProducts.splice(index, 1);
+      if (confirm('Are you sure you want to delete " ' + namePro + '" ?')){
+            listData.listProducts.splice(index, 1);
+      };
       saveData();
       renderProduct();
 }
@@ -236,20 +237,38 @@ if (hour > 12) {
 // add card to order
 function addToOrder(e) {
       let index = e.target.closest('tr').dataset.index;
+
       let newOrder = {
             name: listData.listProducts[index].name,
             qulities: 1,
             price: listData.listProducts[index].price,
             total: listData.listProducts[index].price,
       };
-      listData.listOders.push(newOrder);
+
+      let name = listData.listProducts[index].name;
+      let listNameOfPro = listData.listOders;
+
+      if (listNameOfPro.length === 0) {
+            listData.listOders.push(newOrder);
+      } else {
+            let test = 'yes';
+            for (let listPro of listNameOfPro) {
+
+                  if (name === listPro.name){
+                     test = 'no';
+                  }
+            }    
+            if (test === 'yes'){
+                  listData.listOders.push(newOrder);
+            }
+      }
+
       saveData()
-  
-      if(listData.listOders.length>0){
+
+      if (listData.listOders.length > 0) {
             nbOrder.style.display = 'block'
             nbOrder.textContent = listData.listOders.length;
       }
-
 }
 
 //summry
