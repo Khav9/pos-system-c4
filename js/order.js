@@ -149,18 +149,19 @@ function checkout(e) {
                               listData.listProducts[pro].quanlityall -= listData.listOders[list].qulities;
                               listData.listOders.splice(0, listOrder.length);
                               total.textContent = '0 $';
+                              saveData();
+                              renderCardOrder();
                         }
                   }
             }
       }
-
-      saveData();
-      renderCardOrder();
       nbOrder.style.display = 'none';
       if(listData.listOders.length>0){
             nbOrder.style.display = 'block';
             nbOrder.textContent = listData.listOders.length;
       }
+      saveData();
+      renderCardOrder();
 }
 
 //nb of order
